@@ -6,11 +6,11 @@
 */
 
 class Wolf {
-    private char gender;
-    private String nickName;
-    private float weight;
-    private int age;
-    private String color;
+    char gender;
+    String nickName;
+    float weight;
+    int age;
+    String color;
 
     void walk() {
 
@@ -34,13 +34,13 @@ public class WolfTest {
        Wolf redWolf = new Wolf();
 
        redWolf.gender = 'M';
-       redWolf.nickname = "Jack";
+       redWolf.nickName = "Jack";
        redWolf.weight = 100.4f;
        redWolf.age = 5;
        redWolf.color = "black";
 
        System.out.println("Пол: " + redWolf.gender);
-       System.out.println("Кличка: " + redWolf.nickname);
+       System.out.println("Кличка: " + redWolf.nickName);
        System.out.println("Вес: " + redWolf.weight);
        System.out.println("Возоаст: " + redWolf.age);
        System.out.println("Цвет: " + redWolf.color);
