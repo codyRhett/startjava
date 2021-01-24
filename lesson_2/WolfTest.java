@@ -5,30 +5,6 @@
 * \date 15.01.2021
 */
 
-class Wolf {
-    char gender;
-    String nickName;
-    float weight;
-    int age;
-    String color;
-
-    void walk() {
-
-    }
-    void run() {
-
-    }
-    void sit() {
-
-    }
-    void howl() {
-
-    }
-    void hunt() {
-
-    }
-}
-
 public class WolfTest {
     public static void main(String[] args) {
        Wolf redWolf = new Wolf();
