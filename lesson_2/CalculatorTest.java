@@ -24,8 +24,8 @@ public class CalculatorTest {
             scan = new Scanner(System.in);
             int num2 = scan.nextInt();
 
-            calObj.setNumbers(num1, num2);
-            calObj.mathCalc(sign);
+            calObj.setNumbers(num1, num2, sign);
+            calObj.mathCalc();
             System.out.println("Результат = " + calObj.getResult());
             
             String action = "none";
