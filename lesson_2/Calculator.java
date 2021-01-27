@@ -9,9 +9,9 @@
 public class Calculator {
         private int result = 1;
         private int num1, num2;
-        private String sign;
+        private char sign;
 
-        public void setNumbers(int num1, int num2, String sign) {
+        public void setNumbers(int num1, int num2, char sign) {
             this.num1 = num1;
             this.num2 = num2;
             this.sign = sign;
@@ -23,24 +23,24 @@ public class Calculator {
 
         public void mathCalc() {
             switch (sign) {
-                case "+":
+                case '+':
                     result = num1 + num2;
                 break;
-                case "^":
+                case '^':
                     for (int i = 1; i <= num2; i++) {
                         result *= num1;
                     }
                     break;
-                case "-":
+                case '-':
                     result = num1 - num2;
                     break;
-                case "*":
+                case '*':
                     result = num1 * num2;
                     break;
-                case "/":
+                case '/':
                     result = num1 / num2;
                     break;
-                case "%":
+                case '%':
                     result = num1 % num2;
                     break;
                 default:

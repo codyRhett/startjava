@@ -15,13 +15,11 @@ public class CalculatorTest {
             System.out.print("Введите первое число:");
             Scanner scan = new Scanner(System.in);
             int num1 = scan.nextInt();
-
+			
             System.out.print("Введите математический знак:");
-            scan = new Scanner(System.in);
-            String sign = scan.nextLine();
-
+            char sign = scan.next().charAt(0);
+			
             System.out.print("Введите второе число:");
-            scan = new Scanner(System.in);
             int num2 = scan.nextInt();
 
             calObj.setNumbers(num1, num2, sign);
