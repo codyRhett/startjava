@@ -8,32 +8,33 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        Calculator calObj = new Calculator();
+        Calculator calcObj = new Calculator();
         
-        for(;;)
+        while(true)
         {
             System.out.print("Введите первое число:");
             Scanner scan = new Scanner(System.in);
             int num1 = scan.nextInt();
-			
+            calcObj.setNumber1(num1);
+
             System.out.print("Введите математический знак:");
             char sign = scan.next().charAt(0);
-			
+            calcObj.setSign(sign);
+
             System.out.print("Введите второе число:");
             int num2 = scan.nextInt();
+            calcObj.setNumber2(num2);
 
-            calObj.setNumbers(num1, num2, sign);
-            calObj.mathCalc();
-            System.out.println("Результат = " + calObj.getResult());
+            System.out.println("Результат = " + calcObj.runCalc());
             
-            String action = "none";
+            String action = "yes";
+            action = scan.nextLine();
             do {
-                System.out.print("Хотите продолжить вычисления да/нет? : ");
-                scan = new Scanner(System.in);
-                action = scan.nextLine();
                 if (action.equals("нет")) {
                     return;
                 }
+                System.out.print("Хотите продолжить вычисления да/нет? : ");
+                action = scan.nextLine();
             } while (!action.equals("да"));
         }
     }

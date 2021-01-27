@@ -40,7 +40,7 @@ public class Wolf_2 {
         if (age > 8) {
         System.out.println("Age is not correct");
         } else {
-        this.age = age;
+                this.age = age;
         }
     }
 

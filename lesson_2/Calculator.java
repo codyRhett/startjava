@@ -7,8 +7,9 @@
 */
 
 public class Calculator {
-        private int result = 1;
-        private int num1, num2;
+        private int result;
+        private int num1;
+        private int num2;
         private char sign;
 
         public void setNumbers(int num1, int num2, char sign) {
@@ -17,16 +18,25 @@ public class Calculator {
             this.sign = sign;
         }
 
-        public int getResult() {
-            return result;
+        public void setNumber1(int num1) {
+            this.num1 = num1;
         }
 
-        public void mathCalc() {
+        public void setNumber2(int num2) {
+            this.num2 = num2;
+        }
+
+        public void setSign(char sign) {
+            this.sign = sign;
+        }
+
+        public int runCalc() {
             switch (sign) {
                 case '+':
                     result = num1 + num2;
-                break;
+                    break;
                 case '^':
+                    result = 1;
                     for (int i = 1; i <= num2; i++) {
                         result *= num1;
                     }
@@ -45,7 +55,8 @@ public class Calculator {
                     break;
                 default:
                     System.out.println("Вы ввели неправильный знак");
-                break;
+                    break;
             }
+            return result;
         }
 }
