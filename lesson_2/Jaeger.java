@@ -15,79 +15,68 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-    public Jaeger() {
-        this.modelName = "Name";
-        this.mark = "Mark-1";
-        this.origin = "Russia";
-        this.height = 28.1f;
-        this.weight = 32.1f;
-        this.speed = 4;
-        this.strength = 6;
-        this.armor = 5;
+    public String getModelName() {
+        return modelName;
     }
 
     public void setModelName(String modelName) {
         this.modelName = modelName;
     }
 
+    public String getMark() {
+        return mark;
+    }
+
     public void setMark(String mark) {
         this.mark = mark;
+    }
+
+    public String getOrigin() {
+        return origin;
     }
 
     public void setOrigin(String origin) {
         this.origin = origin;
     }
 
+    public float getHeight() {
+        return height;
+    }
+
     public void setHeight(float height) {
         this.height = height;
+    }
+
+    public float getWeight() {
+        return weight;
     }
 
     public void setWeight(float weight) {
         this.weight = weight;
     }
 
+    public int getSpeed() {
+        return speed;
+    }
+
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    public int getStrength() {
+        return strength;
     }
 
     public void setStrength(int strength) {
         this.strength = strength;
     }
 
-    public void setArmor(int armor) {
-        this.armor = armor;
-    }
-
-    public String getModelName() {
-        return this.modelName;
-    }
-
-    public String getMark() {
-        return this.mark;
-    }
-
-    public String getOrigin() {
-        return this.origin;
-    }
-
-    public float getHeight() {
-        return this.height;
-    }
-
-    public float getWeight() {
-        return this.weight;
-    }
-
-    public int getSpeed() {
-        return this.speed;
-    }
-
-    public int getStrength() {
-        return this.strength;
-    }
-
     public int getArmor() {
         return this.armor;
+    }
+
+    public void setArmor(int armor) {
+        this.armor = armor;
     }
 
     public void fight() {

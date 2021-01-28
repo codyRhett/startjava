@@ -10,15 +10,6 @@ public class JaegerTest {
         Jaeger coyoteTango = new Jaeger();
         Jaeger brawlerYukon = new Jaeger();
 
-        System.out.println("ModelName: " + coyoteTango.getModelName());
-        System.out.println("Mark: " + coyoteTango.getMark());
-        System.out.println("Origin: " + coyoteTango.getOrigin());
-        System.out.println("Height: " + coyoteTango.getHeight());
-        System.out.println("Weight: " + coyoteTango.getWeight());
-        System.out.println("Speed: " + coyoteTango.getSpeed());
-        System.out.println("Strength: " + coyoteTango.getStrength());
-        System.out.println("Armor: " + coyoteTango.getArmor());
-
         coyoteTango.setModelName("Coyote Tango");
         coyoteTango.setMark("Mark-1");
         coyoteTango.setOrigin("Japan");

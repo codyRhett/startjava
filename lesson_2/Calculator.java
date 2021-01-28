@@ -12,12 +12,6 @@ public class Calculator {
         private int num2;
         private char sign;
 
-        public void setNumbers(int num1, int num2, char sign) {
-            this.num1 = num1;
-            this.num2 = num2;
-            this.sign = sign;
-        }
-
         public void setNumber1(int num1) {
             this.num1 = num1;
         }
@@ -30,7 +24,7 @@ public class Calculator {
             this.sign = sign;
         }
 
-        public int runCalc() {
+        public int calculate() {
             switch (sign) {
                 case '+':
                     result = num1 + num2;
