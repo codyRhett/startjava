@@ -6,6 +6,7 @@
 * \date 15.01.2021
 */
 import java.util.Random;
+import java.util.Scanner;
 
 public class GuessNumber {
     private int secretNumber;
@@ -15,50 +16,31 @@ public class GuessNumber {
 
     Random random = new Random();
 
-    public GuessNumber (String name1, String name2) {
-        player1 = new Player(name1);
-        player2 = new Player(name2);
+    public GuessNumber (Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
     }
 
     public void generateNum() {
         secretNumber = random.nextInt(5);
     }
 
-    public void setNumber1(int num1) {
-        player1.setNumber(num1);
-    }
+    public void checkNumbers(Player player) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Игрок " + player.getName() + ", введите число: ");
+        player.setNumber(scan.nextInt());
 
-    public void setNumber2(int num2) {
-        player2.setNumber(num2);
-    }
-
-    public void checkNumber1() {
-        if (player1.getNumber() < secretNumber) {
-            System.out.println("Введенное число = " + player1.getNumber() + " меньше загаданного ");
-            player1.setState("lose");
+        if (player.getNumber() < secretNumber) {
+            System.out.println("Введенное число = " + player.getNumber() + " меньше загаданного ");
+            player.setState("lose");
         }
-        else if (player1.getNumber() > secretNumber) {
-            System.out.println("Введенное число = " + player1.getNumber() + " больше загаданного ");
-            player1.setState("lose");
+        else if (player.getNumber() > secretNumber) {
+            System.out.println("Введенное число = " + player.getNumber() + " больше загаданного ");
+            player.setState("lose");
         }
-        else if (player1.getNumber() == secretNumber) {
-            System.out.println("Загаданное число = " + player1.getNumber() + ". Игрок " + player1.getName() + " выиграл!");
-            player1.setState("win");
-        }
-    }
-
-    public void checkNumber2() {
-        if (player2.getNumber() < secretNumber) {
-            System.out.println("Введенное число = " + player2.getNumber() + " меньше загаданного ");
-            player2.setState("lose");
-        }
-        else if (player2.getNumber() > secretNumber) {
-            System.out.println("Введенное число = " + player2.getNumber() + " больше загаданного ");
-            player2.setState("lose");
-        }
-        else if (player2.getNumber() == secretNumber) {
-            System.out.println("Загаданное число = " + player2.getNumber() + ". Игрок " + player2.getName() + " выиграл!");
-            player2.setState("win");
+        else if (player.getNumber() == secretNumber) {
+            System.out.println("Загаданное число = " + player.getNumber() + ". Игрок " + player.getName() + " выиграл!");
+            player.setState("win");
         }
     }
 }

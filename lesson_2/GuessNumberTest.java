@@ -16,37 +16,42 @@ public class GuessNumberTest {
         System.out.print("Введите имя второго игрока: ");
         String name2 = scan.nextLine();
 
-        GuessNumber guessNum = new GuessNumber(name1, name2);
-        
-        String act = "yes";
-        while (act.equals("yes")) {
+        Player player1 = new Player(name1);
+        Player player2 = new Player(name2);
+
+        GuessNumber guessNum = new GuessNumber(player1, player2);
+
+        while (!player1.getAction().equals("no") && !player2.getAction().equals("no")) {
             System.out.println("Игра началась!!!");
             guessNum.generateNum();
+
             while (true) {
-                System.out.print(guessNum.player1.getName() + ", введите число: ");
-                int num1 = scan.nextInt();
-                guessNum.player1.setNumber(num1);
-                guessNum.checkNumber1();
-                if (guessNum.player1.getState().equals("win")) {
-                    scan.nextLine();
-                    do {
-                        System.out.print("Хотите продолжить? : ");
-                        act = scan.nextLine();
-                    } while(!act.equals("yes") && !act.equals("no"));
-                    break;
+                guessNum.checkNumbers(player1);
+                if (player1.getState().equals("win")) {
+                    while (!player1.getAction().equals("no") && !player1.getAction().equals("yes")) {
+                        System.out.print("Хотите продолжить? [yes/no]: ");
+                        player1.setAction(scan.nextLine());
+                    }
+                    if (player1.getAction().equals("no")) {
+                        return;
+                    } else {
+                        player1.setAction("none");
+                        break;
+                    }
                 }
 
-                System.out.print(guessNum.player2.getName() + ", введите число: ");
-                int num2 = scan.nextInt();
-                guessNum.player2.setNumber(num2);
-                guessNum.checkNumber2();
-                if (guessNum.player2.getState().equals("win")) {
-                    scan.nextLine();
-                    do {
-                        System.out.print("Хотите продолжить? : ");
-                        act = scan.nextLine();
-                    } while (!act.equals("yes") && !act.equals("no"));
-                    break;
+                guessNum.checkNumbers(player2);
+                if (player2.getState().equals("win")) {
+                    while (!player2.getAction().equals("no") && !player2.getAction().equals("yes")) {
+                        System.out.print("Хотите продолжить? [yes/no]: ");
+                        player2.setAction(scan.nextLine());
+                    }
+                    if (player2.getAction().equals("no")) {
+                        return;
+                    } else {
+                        player2.setAction("none");
+                        break;
+                    }
                 }
             }
         }

@@ -7,31 +7,41 @@
 */
 
 public class Player {
-        private String name;
-        private int number;
-        private String state;
+    private String name;
+    private int number;
+    private String state;
+    private String action;
 
-        public Player(String name) {
-            this.name = name;
-        }
+    public Player(String name) {
+        this.name = name;
+        action = "none";
+    }
 
-        public void setState(String state) {
-            this.state = state;
-        }
+    public void setAction(String action) {
+        this.action = action;
+    }
 
-        public String getState() {
-            return state;
-        }
+    public String getAction() {
+        return action;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public void setState(String state) {
+        this.state = state;
+    }
 
-        public void setNumber(int number) {
-            this.number = number;
-        }
+    public String getState() {
+        return state;
+    }
 
-        public int getNumber() {
-            return number;
-        }
+    public String getName() {
+        return name;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
 }
