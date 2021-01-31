@@ -14,8 +14,6 @@ public class GuessNumber {
     private Player player1;
     private Player player2;
 
-    Random random = new Random();
-
     public GuessNumber (Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
@@ -23,7 +21,7 @@ public class GuessNumber {
 
     public void checkNumbers() {
         Scanner scan = new Scanner(System.in);
-        secretNumber = random.nextInt(100);
+        secretNumber = new Random().nextInt(99 + 1) + 1;
         while(true) {
             System.out.print("Игрок " + player1.getName() + ", введите число: ");
             player1.setNumber(scan.nextInt());
