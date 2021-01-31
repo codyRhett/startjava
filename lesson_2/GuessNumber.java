@@ -21,13 +21,9 @@ public class GuessNumber {
         this.player2 = player2;
     }
 
-    public void generateNum() {
-        secretNumber = random.nextInt(100);
-    }
-
     public void checkNumbers() {
         Scanner scan = new Scanner(System.in);
-        generateNum();
+        secretNumber = random.nextInt(100);
         while(true) {
             System.out.print("Игрок " + player1.getName() + ", введите число: ");
             player1.setNumber(scan.nextInt());
