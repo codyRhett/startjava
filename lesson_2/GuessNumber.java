@@ -22,7 +22,7 @@ public class GuessNumber {
     }
 
     public void generateNum() {
-        secretNumber = random.nextInt(5);
+        secretNumber = random.nextInt(100);
     }
 
     public void checkNumbers() {
