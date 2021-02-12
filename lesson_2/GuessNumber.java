@@ -19,9 +19,10 @@ public class GuessNumber {
         this.player2 = player2;
     }
 
-    public void checkNumbers() {
+    public void start() {
         Scanner scan = new Scanner(System.in);
-        secretNumber = new Random().nextInt(99 + 1) + 1;
+        //secretNumber = new Random().nextInt(99 + 1) + 1;
+        secretNumber = new Random().nextInt(4 + 1) + 1;
         while(true) {
             System.out.print("Игрок " + player1.getName() + ", введите число: ");
             player1.setNumber(scan.nextInt());

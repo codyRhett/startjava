@@ -22,21 +22,13 @@ public class GuessNumberTest {
         GuessNumber guessNum = new GuessNumber(player1, player2);
 
         String answer;
-        while(true) {
-            answer = "none";
+        do {
             System.out.println("Игра началась!!!");
-            guessNum.checkNumbers();
-
-            while (!answer.equals("yes") && !answer.equals("no")) {
+            guessNum.start();
+            do {
                 System.out.print("Хотите продолжить? [yes/no]: ");
                 answer = scan.nextLine();
-            }
-
-            if (answer.equals("yes")) {
-                continue;
-            } else {
-                break;
-            }
-        }
+            } while(!answer.equals("yes") && !answer.equals("no"));
+        } while(answer.equals("yes"));
     }
 }
