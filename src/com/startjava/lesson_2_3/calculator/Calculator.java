@@ -5,6 +5,7 @@
 * \author Artem
 * \date 15.01.2021
 */
+package com.startjava.lesson_2_3.calculator;
 
 public class Calculator {
         private int result;

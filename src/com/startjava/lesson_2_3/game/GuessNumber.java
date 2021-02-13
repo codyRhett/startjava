@@ -5,6 +5,11 @@
 * \author Artem
 * \date 15.01.2021
 */
+
+package com.startjava.lesson_2_3.game;
+
+import com.startjava.lesson_2_3.game.Player;
+
 import java.util.Random;
 import java.util.Scanner;
 

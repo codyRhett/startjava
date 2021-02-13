@@ -4,6 +4,7 @@
 * \author Artem
 * \date 15.01.2021
 */
+package com.startjava.lesson_2_3.robot;
 
 public class Jaeger {
     private String modelName;
