@@ -4,6 +4,7 @@
 * \author Artem
 * \date 15.01.2021
 */
+package com.startjava.lesson_1.unicode;
 
 public class Unicode {
     public static void main(String[] args) {
