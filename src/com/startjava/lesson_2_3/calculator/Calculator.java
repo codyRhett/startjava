@@ -7,6 +7,10 @@
 */
 package com.startjava.lesson_2_3.calculator;
 
+import java.lang.Math;
+
+import static java.lang.Math.*;
+
 public class Calculator {
         private int result;
         private int num1;
@@ -28,25 +32,22 @@ public class Calculator {
         public int calculate() {
             switch (sign) {
                 case '+':
-                    result = num1 + num2;
+                    result = addExact(num1, num2);
                     break;
                 case '^':
-                    result = 1;
-                    for (int i = 1; i <= num2; i++) {
-                        result *= num1;
-                    }
+                    result = (int) pow(num1, num2);
                     break;
                 case '-':
-                    result = num1 - num2;
+                    result = subtractExact(num1, num2);
                     break;
                 case '*':
-                    result = num1 * num2;
+                    result = multiplyExact(num1, num2);
                     break;
                 case '/':
                     result = num1 / num2;
                     break;
                 case '%':
-                    result = num1 % num2;
+                    result = floorMod(num1, num2);
                     break;
                 default:
                     System.out.println("Вы ввели неправильный знак");
