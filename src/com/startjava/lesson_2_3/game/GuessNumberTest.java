@@ -28,6 +28,7 @@ public class GuessNumberTest {
         String answer;
         do {
             System.out.println("Игра началась!!!");
+            System.out.println("У вас 10 попыток");
             guessNum.start();
             do {
                 System.out.print("Хотите продолжить? [yes/no]: ");
