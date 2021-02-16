@@ -4,9 +4,7 @@
 * \author Artem
 * \date 15.01.2021
 */
-package com.startjava.lesson_2_3.calculator;
-
-import com.startjava.lesson_2_3.calculator.Calculator;
+package com.startjava.lesson_2_3_4.calculator;
 import java.util.Scanner;
 
 public class CalculatorTest {
@@ -17,17 +15,9 @@ public class CalculatorTest {
 
         while (action.equals("yes")) {
             System.out.print("Введите математическое выражение: ");
-            String str = scan.nextLine();
-            String[] strArr = str.split(" ");
+            String expres  = scan.nextLine();
 
-            int num1 = Integer.parseInt(strArr[0]);
-            int num2 = Integer.parseInt(strArr[2]);
-            char sign = strArr[1].charAt(0);
-            calc.setNumber1(num1);
-            calc.setNumber2(num2);
-            calc.setSign(sign);
-
-            System.out.println("Результат = " + calc.calculate());
+            System.out.println("Результат = " + calc.calculate(expres));
             do {
                 System.out.print("Хотите продолжить вычисления [yes/no]? : ");
                 action = scan.nextLine();
