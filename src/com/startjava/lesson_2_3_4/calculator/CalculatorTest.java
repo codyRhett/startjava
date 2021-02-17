@@ -15,9 +15,9 @@ public class CalculatorTest {
 
         while (action.equals("yes")) {
             System.out.print("Введите математическое выражение: ");
-            String expres  = scan.nextLine();
+            String expression  = scan.nextLine();
 
-            System.out.println("Результат = " + calc.calculate(expres));
+            System.out.println("Результат = " + calc.calculate(expression));
             do {
                 System.out.print("Хотите продолжить вычисления [yes/no]? : ");
                 action = scan.nextLine();
