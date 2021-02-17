@@ -5,15 +5,19 @@
 * \author Artem
 * \date 15.01.2021
 */
-package com.startjava.lesson_2_3.game;
+package com.startjava.lesson_2_3_4.game;
+
+import java.util.Stack;
 
 public class Player {
     private String name;
     private int number;
-    int[] numbers;
+    private Stack mStack;
 
     public Player(String name) {
         this.name = name;
+        int[] numbers = new int[20];
+        mStack = new Stack();
     }
 
     public String getName() {
@@ -21,10 +25,10 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        mStack.addElement(number);
     }
 
-    public int getNumber() {
-        return number;
+    public int getNumber(int index) {
+        return (int)mStack.get(index);
     }
 }

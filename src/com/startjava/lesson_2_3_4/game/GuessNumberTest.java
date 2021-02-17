@@ -5,10 +5,8 @@
 * \author Artem
 * \date 15.01.2021
 */
-package com.startjava.lesson_2_3.game;
+package com.startjava.lesson_2_3_4.game;
 
-import com.startjava.lesson_2_3.game.Player;
-import com.startjava.lesson_2_3.game.GuessNumber;
 import java.util.Scanner;
 
 public class GuessNumberTest {
