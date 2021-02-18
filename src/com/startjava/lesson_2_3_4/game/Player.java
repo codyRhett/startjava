@@ -7,28 +7,36 @@
 */
 package com.startjava.lesson_2_3_4.game;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class Player {
     private String name;
-    private int number;
-    private Stack mStack;
+    private int[] numbers;
 
     public Player(String name) {
         this.name = name;
-        int[] numbers = new int[20];
-        mStack = new Stack();
+        numbers = new int[20];
+        Arrays.fill(numbers, 0);
     }
 
     public String getName() {
         return name;
     }
 
-    public void setNumber(int number) {
-        mStack.addElement(number);
+    public void setNumber(int number, int index) {
+        numbers[index] = number;
+    }
+
+    public void fillZeroes(int indexTo) {
+        Arrays.fill(numbers, 0, indexTo, 0);
     }
 
     public int getNumber(int index) {
-        return (int)mStack.get(index);
+        return (numbers[index]);
+    }
+
+    public int[] getArray(int part) {
+        return (Arrays.copyOf(numbers, cntPart));
     }
 }
