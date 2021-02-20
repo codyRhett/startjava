@@ -13,19 +13,19 @@ import java.util.Stack;
 public class Player {
     private String name;
     private int[] numbers;
-    private int tryCnt;
+    private int tryCounter;
 
     public Player(String name) {
         this.name = name;
         numbers = new int[20];
     }
 
-    public int getTryCnt() {
-        return tryCnt;
+    public int getTryCounter() {
+        return tryCounter;
     }
 
-    public void incrTryCnt() {
-        this.tryCnt++;
+    public void incTryCnt() {
+        tryCounter++;
     }
 
     public String getName() {
@@ -33,19 +33,19 @@ public class Player {
     }
 
     public void setNumber(int number) {
-        numbers[tryCnt] = number;
+        numbers[tryCounter] = number;
     }
 
     public void fillZeroes() {
-        Arrays.fill(numbers, 0, tryCnt, 0);
-        tryCnt = 0;
+        Arrays.fill(numbers, 0, tryCounter, 0);
+        tryCounter = 0;
     }
 
     public int getNumber() {
-        return (numbers[tryCnt]);
+        return numbers[tryCounter];
     }
 
-    public int[] getArray() {
-        return (Arrays.copyOf(numbers, tryCnt));
+    public int[] getPutNumbers() {
+        return Arrays.copyOf(numbers, tryCounter);
     }
 }
