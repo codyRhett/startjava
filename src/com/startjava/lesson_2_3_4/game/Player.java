@@ -12,40 +12,40 @@ import java.util.Stack;
 
 public class Player {
     private String name;
-    private int[] numbers;
+    private int[] nums;
     private int tryCounter;
 
     public Player(String name) {
         this.name = name;
-        numbers = new int[20];
-    }
-
-    public int getTryCounter() {
-        return tryCounter;
-    }
-
-    public void incTryCnt() {
-        tryCounter++;
+        nums = new int[20];
     }
 
     public String getName() {
         return name;
     }
 
-    public void setNumber(int number) {
-        numbers[tryCounter] = number;
+    public void setNum(int num) {
+        nums[tryCounter] = num;
+    }
+
+    public int getNum() {
+        return nums[tryCounter];
+    }
+
+    public int[] getEnteredNums() {
+        return Arrays.copyOf(nums, tryCounter);
+    }
+
+    public int getTryCounter() {
+        return tryCounter;
+    }
+
+    public void incTryCounter() {
+        tryCounter++;
     }
 
     public void fillZeroes() {
-        Arrays.fill(numbers, 0, tryCounter, 0);
+        Arrays.fill(nums, 0, tryCounter, 0);
         tryCounter = 0;
-    }
-
-    public int getNumber() {
-        return numbers[tryCounter];
-    }
-
-    public int[] getPutNumbers() {
-        return Arrays.copyOf(numbers, tryCounter);
     }
 }
