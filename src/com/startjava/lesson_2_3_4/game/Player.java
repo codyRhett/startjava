@@ -26,10 +26,11 @@ public class Player {
 
     public void setNum(int num) {
         nums[tryCounter] = num;
+        tryCounter++;
     }
 
     public int getNum() {
-        return nums[tryCounter];
+        return nums[tryCounter-1];
     }
 
     public int[] getEnteredNums() {
@@ -40,9 +41,9 @@ public class Player {
         return tryCounter;
     }
 
-    public void incTryCounter() {
-        tryCounter++;
-    }
+    //public void incTryCounter() {
+    //    tryCounter++;
+   // }
 
     public void fillZeroes() {
         Arrays.fill(nums, 0, tryCounter, 0);
