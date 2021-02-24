@@ -30,19 +30,23 @@ public class GuessNumber {
         player1.fillZeroes();
         player2.fillZeroes();
 
+        boolean isNumEqual1 = false;
+        boolean isNumEqual2 = false;
         while(!isTryOver(player1) && !isTryOver(player2)) {
             inputNum(player1);
-            if (compareNums(player1) || isTryOver(player1)) {
+            isNumEqual1 = compareNums(player1);
+            if (isNumEqual1 || isTryOver(player1)) {
                 printNums(player1);
-                if (compareNums(player1)) {
+                if (isNumEqual1) {
                     return;
                 }
             }
 
             inputNum(player2);
-            if (compareNums(player2) || isTryOver(player2)) {
+            isNumEqual2 = compareNums(player2);
+            if (isNumEqual2 || isTryOver(player2)) {
                 printNums(player2);
-                if (compareNums(player2)) {
+                if (isNumEqual2) {
                     return;
                 }
             }
