@@ -8,7 +8,6 @@
 package com.startjava.lesson_2_3_4.game;
 
 import java.util.Arrays;
-import java.util.Stack;
 
 public class Player {
     private String name;
@@ -30,7 +29,7 @@ public class Player {
     }
 
     public int getNum() {
-        return nums[tryCounter-1];
+        return nums[tryCounter - 1];
     }
 
     public int[] getEnteredNums() {
