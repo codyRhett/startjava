@@ -41,10 +41,6 @@ public class Player {
         return tryCounter;
     }
 
-    //public void incTryCounter() {
-    //    tryCounter++;
-   // }
-
     public void fillZeroes() {
         Arrays.fill(nums, 0, tryCounter, 0);
         tryCounter = 0;
