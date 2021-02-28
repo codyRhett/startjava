@@ -1,5 +1,10 @@
-CREATE TABLE test_script(
-one text,
-two integer,
-three float
+CREATE TABLE Jaegers(
+id text,
+modelName text,
+mark text,
+height double precision,
+weight double precision,
+status text,
+origin text,
+kaijuKill integer
 );
