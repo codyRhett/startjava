@@ -1,0 +1,1 @@
+psql -U artem -d postgres -a -f /home/artem/java/startjava/src/com/startjava/lesson_5/create_db.sql
